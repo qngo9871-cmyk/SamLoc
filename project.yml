@@ -12,7 +12,7 @@ settings:
     TARGETED_DEVICE_FAMILY: "1"
     IPHONEOS_DEPLOYMENT_TARGET: "16.0"
     MARKETING_VERSION: "1.0.0"
-    CURRENT_PROJECT_VERSION: "1"
+    CURRENT_PROJECT_VERSION: "2"
     INFOPLIST_KEY_ITSAppUsesNonExemptEncryption: NO
     ENABLE_PREVIEWS: YES
 
@@ -33,7 +33,7 @@ targets:
         INFOPLIST_KEY_CFBundleDisplayName: "Sâm Lốc"
         GENERATE_INFOPLIST_FILE: YES
         MARKETING_VERSION: "1.0.0"
-        CURRENT_PROJECT_VERSION: "1"
+        CURRENT_PROJECT_VERSION: "2"
     info:
       path: Info.plist
       properties:

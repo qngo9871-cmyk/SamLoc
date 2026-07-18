@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		04FFC731606FC3FCF22916E5 /* AIPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DCE710400A0A6D5777FDFC1 /* AIPlayer.swift */; };
 		14CE9B87C36351A61963F0B9 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26847CB0805E10827B32F41F /* GameView.swift */; };
+		17840012B59A9E4949B38C79 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C47E903F10D756033F39A3 /* OnboardingView.swift */; };
 		4BB435F8BBF3C3FC57D897D5 /* RulesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0648751600EEF3EC7DCDC361 /* RulesView.swift */; };
 		52CE13ED33F2D7926D375D5D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF6D30970136A9A5DAAD9273 /* Assets.xcassets */; };
 		5C04A41B63E0970DCEEB5D3D /* PurchaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FCF9173E34A1D74F1EFA09 /* PurchaseManager.swift */; };
@@ -46,6 +47,7 @@
 		DA6876B96C9168CF26EC88D5 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		E091EF6EBDE8B7380EC817B4 /* GameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
 		E4C082991D7A0D43C3F1C4EA /* Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localization.swift; sourceTree = "<group>"; };
+		E7C47E903F10D756033F39A3 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		EF6D30970136A9A5DAAD9273 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC7FC723D4BC3C46A5042990 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -70,6 +72,7 @@
 				0FEBB93FE7315543EE608F79 /* CardView.swift */,
 				26847CB0805E10827B32F41F /* GameView.swift */,
 				42B5619B160E581C5DB8CA8E /* HomeView.swift */,
+				E7C47E903F10D756033F39A3 /* OnboardingView.swift */,
 				0648751600EEF3EC7DCDC361 /* RulesView.swift */,
 				255780484110DCC2344DD3F8 /* UpgradeView.swift */,
 			);
@@ -192,6 +195,7 @@
 				DB33E70177007B2002D1D947 /* HomeView.swift in Sources */,
 				A8A8042DA295B7244607B648 /* InstantWin.swift in Sources */,
 				7D0C3687434592065B1322F4 /* Localization.swift in Sources */,
+				17840012B59A9E4949B38C79 /* OnboardingView.swift in Sources */,
 				E816E782BAA3D55ED816530D /* Player.swift in Sources */,
 				5C04A41B63E0970DCEEB5D3D /* PurchaseManager.swift in Sources */,
 				4BB435F8BBF3C3FC57D897D5 /* RulesView.swift in Sources */,
@@ -220,7 +224,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Sâm Lốc";
@@ -273,7 +277,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = SM99L22Q84;
 				ENABLE_NS_ASSERTIONS = NO;
@@ -336,7 +340,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = SM99L22Q84;
 				ENABLE_PREVIEWS = YES;
@@ -376,7 +380,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Sâm Lốc";

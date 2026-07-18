@@ -6,6 +6,7 @@ struct HomeView: View {
     @State private var showGame = false
     @State private var showRules = false
     @State private var showUpgrade = false
+    @State private var showOnboarding = false
     @State private var selectedDifficulty: AIDifficulty = .easy
     @State private var game = GameModel()
 
@@ -51,8 +52,13 @@ struct HomeView: View {
                         }
                         .buttonStyle(.borderedProminent).tint(.green)
 
-                        Button { showRules = true } label: {
-                            Text(L("home.rules")).foregroundStyle(.white.opacity(0.85))
+                        HStack(spacing: 20) {
+                            Button { showOnboarding = true } label: {
+                                Text(L("home.howtoplay")).foregroundStyle(.white.opacity(0.85))
+                            }
+                            Button { showRules = true } label: {
+                                Text(L("home.rules")).foregroundStyle(.white.opacity(0.85))
+                            }
                         }
 
                         if !purchases.isPro {
@@ -80,6 +86,7 @@ struct HomeView: View {
             }
             .sheet(isPresented: $showRules) { RulesView() }
             .sheet(isPresented: $showUpgrade) { UpgradeView() }
+            .sheet(isPresented: $showOnboarding) { OnboardingView(onFinished: { showOnboarding = false }) }
             .task { await purchases.loadProduct() }
         }
     }

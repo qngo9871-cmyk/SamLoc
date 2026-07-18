@@ -2,7 +2,8 @@
 "home.subtitle" = "Bài Việt Nam — Chơi Một Mình Với AI";
 "home.difficulty" = "Độ Khó AI";
 "home.play" = "Chơi";
-"home.rules" = "Luật Chơi";
+"home.rules" = "Luật Đầy Đủ";
+"home.howtoplay" = "Hướng Dẫn";
 "home.upgrade" = "Mở khóa AI Khó & hơn thế nữa →";
 "home.player.you" = "Bạn";
 "home.player.left" = "Trái";
@@ -49,8 +50,17 @@
 "upgrade.restore" = "Khôi Phục Giao Dịch";
 "upgrade.close" = "Để Sau";
 
-"rules.title" = "Luật Chơi";
+"rules.title" = "Luật Đầy Đủ";
 "rules.done" = "Xong";
+
+"onboarding.goal.title" = "Đánh Hết Bài";
+"onboarding.goal.body" = "Bạn và 3 đối thủ AI mỗi người 10 lá. Ai đánh hết bài trước sẽ thắng ván.";
+"onboarding.combos.title" = "Chặt Bài Trước";
+"onboarding.combos.body" = "Đánh một lá, đôi, bộ ba, hoặc sảnh cùng chất lớn hơn bài trước — hoặc bỏ lượt. Tứ quý chặt được tất cả.";
+"onboarding.special.title" = "Coi Chừng Bẫy";
+"onboarding.special.body" = "Bài mở đầu hoàn hảo có thể thắng ngay (\"Tới Trắng\") — nhưng bạn không thể thắng bằng lá 2 lẻ. Chạm \"Luật Đầy Đủ\" bất cứ lúc nào để xem chi tiết.";
+"onboarding.next" = "Tiếp";
+"onboarding.begin" = "Chơi Thôi";
 "rules.deal.title" = "Chia Bài";
 "rules.deal.body" = "4 người chơi, mỗi người 10 lá. Thứ tự từ 3 (nhỏ nhất) đến Át, rồi đến 2 (\"heo\") là lá mạnh nhất. Ai có 3♠ được đánh trước.";
 "rules.combos.title" = "Các Bộ Bài";

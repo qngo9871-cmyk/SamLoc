@@ -2,7 +2,8 @@
 "home.subtitle" = "Vietnamese Card Game — Solo vs. AI";
 "home.difficulty" = "AI Difficulty";
 "home.play" = "Play";
-"home.rules" = "How to Play";
+"home.rules" = "Full Rules";
+"home.howtoplay" = "How to Play";
 "home.upgrade" = "Unlock Hard AI & more →";
 "home.player.you" = "You";
 "home.player.left" = "Left";
@@ -49,8 +50,17 @@
 "upgrade.restore" = "Restore Purchases";
 "upgrade.close" = "Not Now";
 
-"rules.title" = "How to Play";
+"rules.title" = "Full Rules";
 "rules.done" = "Done";
+
+"onboarding.goal.title" = "Shed Every Card";
+"onboarding.goal.body" = "You and 3 AI opponents each get 10 cards. Be the first to play all of yours to win the round.";
+"onboarding.combos.title" = "Beat the Last Play";
+"onboarding.combos.body" = "Play a single, pair, triple, or same-suit straight higher than the last play — or pass. Four of a kind is a bomb that beats everything.";
+"onboarding.special.title" = "Watch for the Traps";
+"onboarding.special.body" = "A perfect opening hand can win instantly (\"Tới Trắng\") — but you can never finish on a lone 2. Tap \"Full Rules\" anytime for every detail.";
+"onboarding.next" = "Next";
+"onboarding.begin" = "Let's Play";
 "rules.deal.title" = "The Deal";
 "rules.deal.body" = "4 players, 10 cards each. Ranks run 3 (lowest) up to Ace, then 2 (\"heo\") is the strongest card. Whoever holds 3♠ leads the first trick.";
 "rules.combos.title" = "Combos";
