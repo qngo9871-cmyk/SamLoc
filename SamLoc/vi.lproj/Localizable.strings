@@ -1,0 +1,65 @@
+"home.title" = "Sâm Lốc";
+"home.subtitle" = "Bài Việt Nam — Chơi Một Mình Với AI";
+"home.difficulty" = "Độ Khó AI";
+"home.play" = "Chơi";
+"home.rules" = "Luật Chơi";
+"home.upgrade" = "Mở khóa AI Khó & hơn thế nữa →";
+"home.player.you" = "Bạn";
+"home.player.left" = "Trái";
+"home.player.across" = "Đối Diện";
+"home.player.right" = "Phải";
+
+"difficulty.easy" = "Dễ";
+"difficulty.normal" = "Vừa";
+"difficulty.hard" = "Khó";
+
+"game.round" = "Ván %d";
+"game.lastPlayed" = "%@ vừa đánh";
+"game.freeLead" = "Ra bài tự do — đánh bất kỳ bộ nào";
+"game.yourTurn" = "Đến lượt bạn";
+"game.declareSam" = "Báo Sâm";
+"game.pass" = "Bỏ Lượt";
+"game.play" = "Đánh Bài";
+"game.nextRound" = "Ván Tiếp Theo";
+"game.matchOver" = "Kết Thúc Trận";
+"game.done" = "Xong";
+
+"log.leads" = "%@ ra bài trước";
+"log.declaredSam" = "%@ đã báo Sâm!";
+"log.played" = "%@ đánh %@";
+"log.passed" = "%@ bỏ lượt";
+"log.samSuccess" = "%@ báo Sâm thành công!";
+"log.roundWinner" = "%@ thắng ván này!";
+"log.instantWin" = "%@ thắng ngay với %@!";
+
+"win.dragonStraight" = "Sảnh Rồng";
+"win.fourTwos" = "Tứ Quý 2";
+"win.sameColor" = "Đồng Màu";
+"win.threeTriples" = "Ba Bộ Ba";
+"win.fivePairs" = "Năm Đôi";
+
+"upgrade.title" = "Sâm Lốc Pro";
+"upgrade.subtitle" = "Mở khóa trải nghiệm đầy đủ.";
+"upgrade.feature.hardAI" = "AI Khó — đối thủ tính bài thực thụ";
+"upgrade.feature.cardBacks" = "Mẫu mặt sau lá bài độc quyền";
+"upgrade.feature.unlimited" = "Chơi không giới hạn, không quảng cáo";
+"upgrade.owned" = "Bạn đã sở hữu Sâm Lốc Pro ✓";
+"upgrade.buy" = "Mở Khóa — %@";
+"upgrade.buyFallback" = "Mở Khóa Sâm Lốc Pro";
+"upgrade.restore" = "Khôi Phục Giao Dịch";
+"upgrade.close" = "Để Sau";
+
+"rules.title" = "Luật Chơi";
+"rules.done" = "Xong";
+"rules.deal.title" = "Chia Bài";
+"rules.deal.body" = "4 người chơi, mỗi người 10 lá. Thứ tự từ 3 (nhỏ nhất) đến Át, rồi đến 2 (\"heo\") là lá mạnh nhất. Ai có 3♠ được đánh trước.";
+"rules.combos.title" = "Các Bộ Bài";
+"rules.combos.body" = "Đánh một lá, đôi, bộ ba, hoặc sảnh cùng chất (từ 3 lá) lớn hơn bài trước đó — hoặc bỏ lượt. Tứ quý là bộ chặt tất cả, kể cả một lá 2 lẻ.";
+"rules.instantwin.title" = "Tới Trắng";
+"rules.instantwin.body" = "Nếu 10 lá bài đầu tiên của bạn tạo thành Sảnh Rồng, Tứ Quý 2, đồng màu, Ba Bộ Ba, hoặc Năm Đôi, bạn thắng ngay ván đó — trước khi ai đánh một lá nào.";
+"rules.heo.title" = "Luật Lá 2 Lẻ";
+"rules.heo.body" = "Bạn không thể thắng bằng cách đánh một lá 2 lẻ làm lá cuối cùng — hãy giữ nó để ghép đôi, bộ ba, hoặc sảnh.";
+"rules.sam.title" = "Báo Sâm";
+"rules.sam.body" = "Khi có bài mạnh và ngắn, hãy báo Sâm trước khi ra bài. Thắng ván sẽ được nhân đôi điểm — nhưng báo Sâm thất bại sẽ bị phạt gấp đôi.";
+"rules.scoring.title" = "Tính Điểm";
+"rules.scoring.body" = "Người thắng ván tính điểm từ số bài còn lại của những người khác. Lá 2 chưa đánh và tứ quý chưa đánh sẽ bị phạt thêm.";

@@ -1,0 +1,65 @@
+"home.title" = "Sâm Lốc";
+"home.subtitle" = "Vietnamese Card Game — Solo vs. AI";
+"home.difficulty" = "AI Difficulty";
+"home.play" = "Play";
+"home.rules" = "How to Play";
+"home.upgrade" = "Unlock Hard AI & more →";
+"home.player.you" = "You";
+"home.player.left" = "Left";
+"home.player.across" = "Across";
+"home.player.right" = "Right";
+
+"difficulty.easy" = "Easy";
+"difficulty.normal" = "Normal";
+"difficulty.hard" = "Hard";
+
+"game.round" = "Round %d";
+"game.lastPlayed" = "%@ played";
+"game.freeLead" = "Free lead — play any combo";
+"game.yourTurn" = "Your turn";
+"game.declareSam" = "Declare Sâm";
+"game.pass" = "Pass";
+"game.play" = "Play";
+"game.nextRound" = "Next Round";
+"game.matchOver" = "Match Over";
+"game.done" = "Done";
+
+"log.leads" = "%@ leads";
+"log.declaredSam" = "%@ declared Báo Sâm!";
+"log.played" = "%@ played %@";
+"log.passed" = "%@ passed";
+"log.samSuccess" = "%@'s Sâm declaration succeeded!";
+"log.roundWinner" = "%@ wins the round!";
+"log.instantWin" = "%@ wins instantly with %@!";
+
+"win.dragonStraight" = "Dragon Straight (Sảnh Rồng)";
+"win.fourTwos" = "Four 2s";
+"win.sameColor" = "All One Color";
+"win.threeTriples" = "Three Triples";
+"win.fivePairs" = "Five Pairs";
+
+"upgrade.title" = "Sâm Lốc Pro";
+"upgrade.subtitle" = "Unlock the full experience.";
+"upgrade.feature.hardAI" = "Hard AI — real card-counting opponents";
+"upgrade.feature.cardBacks" = "Exclusive card back designs";
+"upgrade.feature.unlimited" = "Unlimited matches, no ads, ever";
+"upgrade.owned" = "You own Sâm Lốc Pro ✓";
+"upgrade.buy" = "Unlock — %@";
+"upgrade.buyFallback" = "Unlock Sâm Lốc Pro";
+"upgrade.restore" = "Restore Purchases";
+"upgrade.close" = "Not Now";
+
+"rules.title" = "How to Play";
+"rules.done" = "Done";
+"rules.deal.title" = "The Deal";
+"rules.deal.body" = "4 players, 10 cards each. Ranks run 3 (lowest) up to Ace, then 2 (\"heo\") is the strongest card. Whoever holds 3♠ leads the first trick.";
+"rules.combos.title" = "Combos";
+"rules.combos.body" = "Play a single, pair, triple, or same-suit straight (3+ cards) higher than the last play — or pass. Four of a kind is a bomb that beats everything, even a lone 2.";
+"rules.instantwin.title" = "Instant Win — Tới Trắng";
+"rules.instantwin.body" = "If your opening 10 cards form a Dragon Straight, Four 2s, all-one-color, Three Triples, or Five Pairs, you win the round instantly — before a single card is played.";
+"rules.heo.title" = "The Lone 2 Rule";
+"rules.heo.body" = "You can't win by playing a lone 2 as your very last card — hold it for a pair, triple, or straight instead.";
+"rules.sam.title" = "Báo Sâm";
+"rules.sam.body" = "With a strong short hand, declare Sâm before you lead. Win the round for double points — but a failed declaration doubles your penalty.";
+"rules.scoring.title" = "Scoring";
+"rules.scoring.body" = "The round winner scores points from every other player's remaining cards. Unplayed 2s and an unplayed four-of-a-kind cost extra.";

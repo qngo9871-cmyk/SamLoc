@@ -1,0 +1,421 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		04FFC731606FC3FCF22916E5 /* AIPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DCE710400A0A6D5777FDFC1 /* AIPlayer.swift */; };
+		14CE9B87C36351A61963F0B9 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26847CB0805E10827B32F41F /* GameView.swift */; };
+		4BB435F8BBF3C3FC57D897D5 /* RulesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0648751600EEF3EC7DCDC361 /* RulesView.swift */; };
+		52CE13ED33F2D7926D375D5D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF6D30970136A9A5DAAD9273 /* Assets.xcassets */; };
+		5C04A41B63E0970DCEEB5D3D /* PurchaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FCF9173E34A1D74F1EFA09 /* PurchaseManager.swift */; };
+		7A8407404ED15EEA83BA7654 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FEBB93FE7315543EE608F79 /* CardView.swift */; };
+		7D0C3687434592065B1322F4 /* Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C082991D7A0D43C3F1C4EA /* Localization.swift */; };
+		82A53782CE1A28D032E4AB46 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF723DD93047310FEADAA06 /* ContentView.swift */; };
+		83F746AE53A8D7CAEF1D58DC /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E091EF6EBDE8B7380EC817B4 /* GameModel.swift */; };
+		9A967D928AB9FDD7DD634C7D /* SamLocApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348B1CA8D91020F9041372C6 /* SamLocApp.swift */; };
+		A5E84447E9D927C67E9916B1 /* UpgradeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 255780484110DCC2344DD3F8 /* UpgradeView.swift */; };
+		A8A8042DA295B7244607B648 /* InstantWin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D65E4D783013858B5A44A09 /* InstantWin.swift */; };
+		DB33E70177007B2002D1D947 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B5619B160E581C5DB8CA8E /* HomeView.swift */; };
+		E66B5DA0426A53FA38F60E42 /* Combo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD36953AFFD945DE22A1C12 /* Combo.swift */; };
+		E816E782BAA3D55ED816530D /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7FC723D4BC3C46A5042990 /* Player.swift */; };
+		EE362B5CFC519A82D9AD255D /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6876B96C9168CF26EC88D5 /* Card.swift */; };
+		EE9F9E770158E541116FDD77 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 48EDEBC35273CC0CE4A13A42 /* Localizable.strings */; };
+		F0522DBFF0892FD0038A16AC /* GameModel+Capture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44850962094D64B942CCB979 /* GameModel+Capture.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0648751600EEF3EC7DCDC361 /* RulesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesView.swift; sourceTree = "<group>"; };
+		0DCE710400A0A6D5777FDFC1 /* AIPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIPlayer.swift; sourceTree = "<group>"; };
+		0FEBB93FE7315543EE608F79 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		255780484110DCC2344DD3F8 /* UpgradeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpgradeView.swift; sourceTree = "<group>"; };
+		26847CB0805E10827B32F41F /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		2D65E4D783013858B5A44A09 /* InstantWin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstantWin.swift; sourceTree = "<group>"; };
+		314DD2DBE419CAE0F5A869F1 /* SamLoc.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = SamLoc.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		348B1CA8D91020F9041372C6 /* SamLocApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SamLocApp.swift; sourceTree = "<group>"; };
+		42B5619B160E581C5DB8CA8E /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		43AC78E95AED6300B6F3E759 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		440F3741BC340A2B75CE08DB /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Localizable.strings; sourceTree = "<group>"; };
+		44850962094D64B942CCB979 /* GameModel+Capture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GameModel+Capture.swift"; sourceTree = "<group>"; };
+		8DF723DD93047310FEADAA06 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		BAD36953AFFD945DE22A1C12 /* Combo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Combo.swift; sourceTree = "<group>"; };
+		D0FCF9173E34A1D74F1EFA09 /* PurchaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseManager.swift; sourceTree = "<group>"; };
+		DA6876B96C9168CF26EC88D5 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		E091EF6EBDE8B7380EC817B4 /* GameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
+		E4C082991D7A0D43C3F1C4EA /* Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localization.swift; sourceTree = "<group>"; };
+		EF6D30970136A9A5DAAD9273 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FC7FC723D4BC3C46A5042990 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		165E27FCF8E53C2F5EA21A02 /* SamLoc */ = {
+			isa = PBXGroup;
+			children = (
+				EF6D30970136A9A5DAAD9273 /* Assets.xcassets */,
+				8DF723DD93047310FEADAA06 /* ContentView.swift */,
+				348B1CA8D91020F9041372C6 /* SamLocApp.swift */,
+				A87E12D4B59EF8CB9D2B47E1 /* Core */,
+				48EDEBC35273CC0CE4A13A42 /* Localizable.strings */,
+				43AFF6C5823C01623E7DB008 /* Views */,
+			);
+			path = SamLoc;
+			sourceTree = "<group>";
+		};
+		43AFF6C5823C01623E7DB008 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0FEBB93FE7315543EE608F79 /* CardView.swift */,
+				26847CB0805E10827B32F41F /* GameView.swift */,
+				42B5619B160E581C5DB8CA8E /* HomeView.swift */,
+				0648751600EEF3EC7DCDC361 /* RulesView.swift */,
+				255780484110DCC2344DD3F8 /* UpgradeView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9B6B4B7C4466228ED17FCA60 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				314DD2DBE419CAE0F5A869F1 /* SamLoc.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A87E12D4B59EF8CB9D2B47E1 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				0DCE710400A0A6D5777FDFC1 /* AIPlayer.swift */,
+				DA6876B96C9168CF26EC88D5 /* Card.swift */,
+				BAD36953AFFD945DE22A1C12 /* Combo.swift */,
+				E091EF6EBDE8B7380EC817B4 /* GameModel.swift */,
+				44850962094D64B942CCB979 /* GameModel+Capture.swift */,
+				2D65E4D783013858B5A44A09 /* InstantWin.swift */,
+				E4C082991D7A0D43C3F1C4EA /* Localization.swift */,
+				FC7FC723D4BC3C46A5042990 /* Player.swift */,
+				D0FCF9173E34A1D74F1EFA09 /* PurchaseManager.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		EBE8C7949E576711E72D6659 = {
+			isa = PBXGroup;
+			children = (
+				165E27FCF8E53C2F5EA21A02 /* SamLoc */,
+				9B6B4B7C4466228ED17FCA60 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6B3CBA6B6567EDE43D981925 /* SamLoc */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7F57A0065EE3019F80AA3568 /* Build configuration list for PBXNativeTarget "SamLoc" */;
+			buildPhases = (
+				8D2DB98B493134912D66F50E /* Sources */,
+				B22B6C64ADEF9FABEA30B38F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SamLoc;
+			packageProductDependencies = (
+			);
+			productName = SamLoc;
+			productReference = 314DD2DBE419CAE0F5A869F1 /* SamLoc.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4B927FCC5D76E3F3AC72087F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					6B3CBA6B6567EDE43D981925 = {
+						DevelopmentTeam = SM99L22Q84;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 41191505F663059C3ED5EA1E /* Build configuration list for PBXProject "SamLoc" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+				vi,
+			);
+			mainGroup = EBE8C7949E576711E72D6659;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 9B6B4B7C4466228ED17FCA60 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6B3CBA6B6567EDE43D981925 /* SamLoc */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B22B6C64ADEF9FABEA30B38F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52CE13ED33F2D7926D375D5D /* Assets.xcassets in Resources */,
+				EE9F9E770158E541116FDD77 /* Localizable.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D2DB98B493134912D66F50E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04FFC731606FC3FCF22916E5 /* AIPlayer.swift in Sources */,
+				EE362B5CFC519A82D9AD255D /* Card.swift in Sources */,
+				7A8407404ED15EEA83BA7654 /* CardView.swift in Sources */,
+				E66B5DA0426A53FA38F60E42 /* Combo.swift in Sources */,
+				82A53782CE1A28D032E4AB46 /* ContentView.swift in Sources */,
+				F0522DBFF0892FD0038A16AC /* GameModel+Capture.swift in Sources */,
+				83F746AE53A8D7CAEF1D58DC /* GameModel.swift in Sources */,
+				14CE9B87C36351A61963F0B9 /* GameView.swift in Sources */,
+				DB33E70177007B2002D1D947 /* HomeView.swift in Sources */,
+				A8A8042DA295B7244607B648 /* InstantWin.swift in Sources */,
+				7D0C3687434592065B1322F4 /* Localization.swift in Sources */,
+				E816E782BAA3D55ED816530D /* Player.swift in Sources */,
+				5C04A41B63E0970DCEEB5D3D /* PurchaseManager.swift in Sources */,
+				4BB435F8BBF3C3FC57D897D5 /* RulesView.swift in Sources */,
+				9A967D928AB9FDD7DD634C7D /* SamLocApp.swift in Sources */,
+				A5E84447E9D927C67E9916B1 /* UpgradeView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		48EDEBC35273CC0CE4A13A42 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				43AC78E95AED6300B6F3E759 /* en */,
+				440F3741BC340A2B75CE08DB /* vi */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		00752BB54EFF09C30E42FC9E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Sâm Lốc";
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.quyenngo.samloc;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		1D80E397858D1BA251409770 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = SM99L22Q84;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		4C14FF2FF20F84B31CEACE05 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = SM99L22Q84;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		C0AD6E6BD51EC3AADDA9479C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Sâm Lốc";
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.quyenngo.samloc;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		41191505F663059C3ED5EA1E /* Build configuration list for PBXProject "SamLoc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C14FF2FF20F84B31CEACE05 /* Debug */,
+				1D80E397858D1BA251409770 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		7F57A0065EE3019F80AA3568 /* Build configuration list for PBXNativeTarget "SamLoc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C0AD6E6BD51EC3AADDA9479C /* Debug */,
+				00752BB54EFF09C30E42FC9E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4B927FCC5D76E3F3AC72087F /* Project object */;
+}
