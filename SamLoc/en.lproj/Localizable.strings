@@ -24,13 +24,13 @@
 "game.matchOver" = "Match Over";
 "game.done" = "Done";
 
-"log.leads" = "%@ leads";
+"log.leads" = "%@ to lead";
 "log.declaredSam" = "%@ declared Báo Sâm!";
 "log.played" = "%@ played %@";
 "log.passed" = "%@ passed";
 "log.samSuccess" = "%@'s Sâm declaration succeeded!";
-"log.roundWinner" = "%@ wins the round!";
-"log.instantWin" = "%@ wins instantly with %@!";
+"log.roundWinner" = "%@ — round won!";
+"log.instantWin" = "%@ — instant win with %@!";
 
 "win.dragonStraight" = "Dragon Straight (Sảnh Rồng)";
 "win.fourTwos" = "Four 2s";
