@@ -6,7 +6,30 @@ scout in Claude's memory (`project_vietnamese_card_games_scout` / `project_samlo
 read those first for the full history (why this game, why not Tiến Lên/Binh Xập Xám/Xì
 Dách, the incumbent teardown, naming research).
 
-**Status: 🟢 SUBMITTED, WAITING_FOR_REVIEW (2026-07-18).**
+**Status: 🟢 LIVE since 2026-07-18 (v1.0.0). v1.0.1 SUBMITTED, WAITING_FOR_REVIEW (2026-08-02).**
+
+Sales as of 2026-08-02 (Jun 1 – Aug 2): 53 downloads, $0 proceeds — 47 from
+Vietnam, rest scattered (KR/GB/IN/MX/US). All free-tier; zero IAP revenue.
+
+**Bug found and fixed 2026-08-02: the `Sam Loc Pro` IAP was never actually
+purchasable.** It was configured in ASC ($2.99, non-consumable) but stuck at
+`READY_TO_SUBMIT` — v1.0.0's two review submissions on launch day only
+included the app-version item, never an IAP item, so Apple never reviewed/
+approved the IAP. `PurchaseManager.swift`'s `guard let product else { ... }`
+fallback made this invisible: tapping Buy just showed "Product not available"
+instead of crashing, so nobody (including App Review) noticed. Apple also
+blocks submitting a first non-consumable IAP standalone — it must ride along
+with an app-version submission (`STATE_ERROR.FIRST_NON_CONSUMABLE_MUST_BE_SUBMITTED_ON_VERSION`).
+Fix: bumped to v1.0.1 (build 3), attached the IAP to that version's review
+submission, submitted together — now `WAITING_FOR_REVIEW`. Once Apple
+approves, `Sam Loc Pro` becomes purchasable for the first time since launch.
+
+**Other apps in this portfolio had the identical bug as of 2026-08-02** —
+see `~/asc-tools/README.md` gotcha #7 and the audit findings in memory
+(`[[feedback_iap_must_ride_with_first_version_submission]]`): Klotski,
+Hanafuda Koi-Koi, Fanorona, Janggi, and Mythsmith were all live with their
+IAP(s) stuck at `READY_TO_SUBMIT`, never purchasable. Not yet fixed for
+those apps as of this note.
 
 ## What this is
 
