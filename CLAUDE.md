@@ -6,10 +6,38 @@ scout in Claude's memory (`project_vietnamese_card_games_scout` / `project_samlo
 read those first for the full history (why this game, why not Tiến Lên/Binh Xập Xám/Xì
 Dách, the incumbent teardown, naming research).
 
-**Status: 🟢 LIVE since 2026-07-18 (v1.0.0). v1.0.1 SUBMITTED, WAITING_FOR_REVIEW (2026-08-02).**
+**Status: 🟢 LIVE since 2026-07-18. v1.0.1 IAP fix APPROVED and purchasable (confirmed
+2026-08-18). 7-day-trial-then-full-paywall change implemented 2026-08-18, NOT YET
+SUBMITTED — code built/verified in Simulator, awaiting user go-ahead to archive/submit.**
 
-Sales as of 2026-08-02 (Jun 1 – Aug 2): 53 downloads, $0 proceeds — 47 from
-Vietnam, rest scattered (KR/GB/IN/MX/US). All free-tier; zero IAP revenue.
+Sales Jun 1 – Aug 18: 174 downloads (159 from Vietnam, rest scattered
+KR/GB/IN/DE/JP/MX/SG/TW/US), **0 IAP units, $0 proceeds** — despite the IAP being
+genuinely `APPROVED`/purchasable this whole window. Root cause: the free tier (Easy +
+Normal AI, full rules, no ads) was the complete game for casual players; only Hard AI +
+card backs were ever gated. Same pattern and same fix as ChineseChess's v1.0.6 pilot
+(see `~/Projects/ChineseChess/CLAUDE.md` and memory
+`project_chinesechess_trial_paywall_pilot`).
+
+**2026-08-18 — 7-day trial, then everything locks (no permanent free tier).** Standing
+rule now: no app in this portfolio should offer free play at any difficulty/mode forever,
+only a capped trial (see memory `feedback_no_permanent_free_tier_trials_only`).
+`PurchaseManager.swift` gained `trialActive`/`trialDaysRemaining` backed by a
+`firstLaunchDate` UserDefaults key (7-day `trialDuration`, identical mechanism to
+ChineseChess). `HomeView.isLocked(_:)` now gates **all three difficulties** (Easy/Normal/
+Hard) once the trial expires and the user isn't Pro — previously only Hard was ever
+gated. Existing installs with no stored `firstLaunchDate` get the clock started by this
+update rather than being locked out immediately. `UpgradeView` subtitle and the Home
+footnote button switch to "trial ended" copy once expired. Also fixed a latent bug found
+while in this file: `updateEntitlementStatus()`'s `#if DEBUG isPro = true` was a bare
+override with no `SL_CAPTURE` exemption — double-gated it (matching the
+`SapXam`/`Chan` reference pattern) so the `SL_CAPTURE=upgrade` screenshot mode shows the
+real locked/buy-button state instead of "already purchased." Verified via a real
+Simulator build: trial-active state (Easy/Normal unlocked, Hard locked, "Free trial — 7
+day(s) left"), trial-expired state (all three locked, "Trial ended" footnote), and the
+Upgrade screen's trial-ended copy all render correctly. **Not yet archived/submitted —
+this is a real product change for existing live users, holding for explicit go-ahead
+before shipping** (see the staggered-submission caution in
+`feedback_new_app_build_checklist` item 7).
 
 **Bug found and fixed 2026-08-02: the `Sam Loc Pro` IAP was never actually
 purchasable.** It was configured in ASC ($2.99, non-consumable) but stuck at
