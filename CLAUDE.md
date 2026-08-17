@@ -6,9 +6,13 @@ scout in Claude's memory (`project_vietnamese_card_games_scout` / `project_samlo
 read those first for the full history (why this game, why not Tiến Lên/Binh Xập Xám/Xì
 Dách, the incumbent teardown, naming research).
 
-**Status: 🟢 LIVE since 2026-07-18. v1.0.1 IAP fix APPROVED and purchasable (confirmed
-2026-08-18). 7-day-trial-then-full-paywall change implemented 2026-08-18, NOT YET
-SUBMITTED — code built/verified in Simulator, awaiting user go-ahead to archive/submit.**
+**Status: 🟢 LIVE since 2026-07-18 (v1.0.1). v1.0.2 SUBMITTED, WAITING_FOR_REVIEW
+(2026-08-18) — 7-day-trial-then-full-paywall, build 4, reviewSubmission
+`570cacb3-085b-43f4-9de1-d7529f864a53`, version `cedc4bba-e6b8-45ab-8815-5ed3346c0cfc`.
+Archived/exported via `-authenticationKey*` flags (see `feedback_asc_release_and_signing`
+memory), uploaded via altool, version+build+whatsNew (en+vi) created via
+`~/asc-tools/new_version.py` + one-off API calls, submitted via a fresh reviewSubmission
+(no orphaned draft existed to reuse).
 
 Sales Jun 1 – Aug 18: 174 downloads (159 from Vietnam, rest scattered
 KR/GB/IN/DE/JP/MX/SG/TW/US), **0 IAP units, $0 proceeds** — despite the IAP being
