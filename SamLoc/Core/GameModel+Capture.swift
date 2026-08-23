@@ -29,6 +29,17 @@ extension GameModel {
             roundOver = true
             roundLog = [String(format: L("log.instantWin"), players[0].name, L(InstantWinKind.dragonStraight.titleKey))]
 
+        case "baosam":
+            players = [
+                Player(id: 0, name: L(names[0]),
+                       hand: [], isHuman: true, finishedRank: 1, declaredSam: true),
+                Player(id: 1, name: L(names[1]), hand: Array(deck.shuffled().prefix(4)), isHuman: false),
+                Player(id: 2, name: L(names[2]), hand: Array(deck.shuffled().prefix(6)), isHuman: false),
+                Player(id: 3, name: L(names[3]), hand: Array(deck.shuffled().prefix(2)), isHuman: false),
+            ]
+            roundOver = true
+            roundLog = [String(format: L("log.samSuccess"), players[0].name)]
+
         default: // "midgame"
             players = [
                 Player(id: 0, name: L(names[0]),

@@ -31,7 +31,7 @@
 "log.declaredSam" = "%@ declared Báo Sâm!";
 "log.played" = "%@ played %@";
 "log.passed" = "%@ passed";
-"log.samSuccess" = "%@'s Sâm declaration succeeded!";
+"log.samSuccess" = "%@ successfully declared Báo Sâm!";
 "log.roundWinner" = "%@ — round won!";
 "log.instantWin" = "%@ — instant win with %@!";
 

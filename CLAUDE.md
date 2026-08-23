@@ -63,7 +63,7 @@ Hanafuda Koi-Koi, Fanorona, Janggi, and Mythsmith were all live with their
 IAP(s) stuck at `READY_TO_SUBMIT`, never purchasable. Not yet fixed for
 those apps as of this note.
 
-## On-device AI round commentary (prototype, 2026-08-24, not yet submitted)
+## On-device AI round commentary (prototype, 2026-08-24 — NOT recommended to ship as-is)
 
 `Core/AICommentary.swift` + a small hook in `Views/GameView.swift` add an optional
 one-line commentary under the round-over overlay, generated live on-device via Apple's
@@ -73,26 +73,46 @@ scoped prototype exploring "on-device AI features" per the AI-use-cases brainsto
 this session; see memory for the broader reasoning (why on-device fits this
 low-revenue/trial-based portfolio, localization-maintenance angle, etc.).
 
-**Real finding from on-device testing (not simulated) — worth remembering for any future
-use of FoundationModels in this portfolio:** a first version that only asked for free
-text hallucinated in 1 of 3 Vietnamese test runs — it invented a fake "declaration
-detected and voided" penalty narrative that was never in the facts it was given. Root
-cause: the facts string didn't ground it in what *hadn't* happened, and free text has no
-structural way to catch a model going off-script. Fix: the `@Generable` struct now also
-requires two typed boolean claims (`claimsBaoSamOutcome`, `claimsPenaltyOrInvalidation`)
-alongside the text, cross-checked against the real `viaBaoSam` fact and against the
-fact that this commentary is never given any penalty info (so that claim must always be
-false) — a discard-if-ungrounded validator, not a keyword scan of translated text, since
-keyword-matching across EN/VI output doesn't generalize. Also enforces a ~22-word cap
-since unconstrained output tended to ramble past "one short sentence." Re-tested 6/6
-clean (5 VI + 1 EN) after the fix. Not yet stress-tested for the Báo Sâm-success/failure
-path (no capture scenario exists for it) or on real Apple Intelligence hardware (only
-tested via `xcodebuild`'s iOS 26.5 Simulator on this Mac mini, which does have Apple
-Intelligence available to it) — do that before considering this production-ready.
+**Conclusion after three rounds of real on-device testing (not simulated): don't ship
+free-generated commentary text.** Each round fixed one concrete failure mode; testing
+then found a *different* one. Not a one-off bug to patch — evidence the "free text +
+validate the output" architecture is inherently leaky for this use case:
 
-**Not yet decided for shipping** — this is additive and low-risk (no IAP/paywall
-surface, no new entitlements), but hasn't had the same real-device verification pass
-given to the trial-lock change above. Hold for explicit go-ahead like that change.
+1. Round 1: 1/3 Vietnamese runs invented a fake "declaration detected and voided"
+   penalty narrative never in its facts. Fixed by adding typed `@Generable` boolean
+   claims (`claimsBaoSamOutcome`, `claimsPenaltyOrInvalidation`) cross-checked against
+   real facts, discard-if-ungrounded, plus a ~22-word cap.
+2. Round 2 (Báo Sâm path, previously untested — no capture scenario existed for it;
+   added `SL_CAPTURE=baosam`): 3/3 runs ignored the requested language entirely and
+   echoed the English facts text almost verbatim, because the facts were themselves
+   near-complete sentences the model could lazily copy. Fixed by rewriting facts as
+   terse `key: value` data instead of sentences, moving all explanation into the
+   static instructions, and adding `looksLikeTargetLanguage` — a cheap script-based
+   check (Vietnamese diacritic presence) since keyword-matching translated text
+   doesn't generalize across languages.
+3. Round 2 retest: 4/5 clean, but 1/5 fabricated a new, different claim — "you're
+   guaranteed to win the next round" — which wasn't in any given fact and isn't a
+   claim type either typed-claims check was watching for. This is the core problem:
+   the model can invent a new *kind* of fabrication faster than specific validators
+   can be added for each one already found.
+
+**If AI commentary is revisited later, don't use free generation** — pick from a small
+set of pre-written template sentences per outcome (optionally have the model choose
+which template fits, not write prose), which closes off fabrication by construction
+instead of chasing it reactively. Free-text + post-hoc validation is not safe enough
+for user-facing copy on a live app, even on-device with no server cost.
+
+**Also fixed independently, unconditionally good regardless of the above:** a static
+string grammar bug in `en.lproj/Localizable.strings` — `"log.samSuccess"` read `"%@'s
+Sâm declaration succeeded!"`, which produced "You's Sâm declaration succeeded!" when
+`%@` = "You". This is the exact known trap already documented below (subject-verb
+agreement breaking when `%@` = "You") that the earlier fix pass evidently missed for
+this specific string. Now reads `"%@ successfully declared Báo Sâm!"`, which is
+grammatically valid for both "You" and a third-person AI name.
+
+**Status: code committed for documentation/learning value, feature not wired to ship.**
+Not deleted — the typed-claims validator pattern and the Báo Sâm capture scenario are
+reusable if this is revisited with a template-based design instead of free generation.
 
 ## What this is
 
