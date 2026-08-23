@@ -2,6 +2,7 @@ import SwiftUI
 
 struct GameView: View {
     @ObservedObject var game: GameModel
+    @StateObject private var commentary = AICommentaryProvider()
     @State private var selected: Set<UUID> = []
     @Environment(\.dismiss) private var dismiss
 
@@ -136,6 +137,12 @@ struct GameView: View {
             } else if let last = game.roundLog.last {
                 Text(last).font(.title3.bold()).multilineTextAlignment(.center)
             }
+            if let line = commentary.text {
+                Text(line)
+                    .font(.footnote)
+                    .foregroundStyle(.white.opacity(0.75))
+                    .multilineTextAlignment(.center)
+            }
             Button(L("game.nextRound")) { game.startRound() }
                 .buttonStyle(.borderedProminent).tint(.green)
         }
@@ -143,6 +150,29 @@ struct GameView: View {
         .padding(28)
         .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 20))
         .padding(40)
+        .onAppear { triggerCommentary() }
+    }
+
+    private func triggerCommentary() {
+        if let win = game.instantWin {
+            commentary.generate(
+                winnerName: game.players[win.playerIndex].name,
+                winnerIsHuman: game.players[win.playerIndex].isHuman,
+                viaBaoSam: false,
+                instantWinTitle: L(win.kind.titleKey),
+                difficulty: game.difficulty,
+                language: LocalizationManager.shared.language
+            )
+        } else if let winner = game.players.first(where: { $0.finishedRank == 1 }) {
+            commentary.generate(
+                winnerName: winner.name,
+                winnerIsHuman: winner.isHuman,
+                viaBaoSam: winner.declaredSam,
+                instantWinTitle: nil,
+                difficulty: game.difficulty,
+                language: LocalizationManager.shared.language
+            )
+        }
     }
 
     private var matchOverOverlay: some View {

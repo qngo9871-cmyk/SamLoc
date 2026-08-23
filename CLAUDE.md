@@ -63,6 +63,37 @@ Hanafuda Koi-Koi, Fanorona, Janggi, and Mythsmith were all live with their
 IAP(s) stuck at `READY_TO_SUBMIT`, never purchasable. Not yet fixed for
 those apps as of this note.
 
+## On-device AI round commentary (prototype, 2026-08-24, not yet submitted)
+
+`Core/AICommentary.swift` + a small hook in `Views/GameView.swift` add an optional
+one-line commentary under the round-over overlay, generated live on-device via Apple's
+`FoundationModels` framework (iOS 26+, Apple Intelligence-eligible hardware only —
+availability-gated, silently absent otherwise so it's purely additive). Built as a
+scoped prototype exploring "on-device AI features" per the AI-use-cases brainstorm in
+this session; see memory for the broader reasoning (why on-device fits this
+low-revenue/trial-based portfolio, localization-maintenance angle, etc.).
+
+**Real finding from on-device testing (not simulated) — worth remembering for any future
+use of FoundationModels in this portfolio:** a first version that only asked for free
+text hallucinated in 1 of 3 Vietnamese test runs — it invented a fake "declaration
+detected and voided" penalty narrative that was never in the facts it was given. Root
+cause: the facts string didn't ground it in what *hadn't* happened, and free text has no
+structural way to catch a model going off-script. Fix: the `@Generable` struct now also
+requires two typed boolean claims (`claimsBaoSamOutcome`, `claimsPenaltyOrInvalidation`)
+alongside the text, cross-checked against the real `viaBaoSam` fact and against the
+fact that this commentary is never given any penalty info (so that claim must always be
+false) — a discard-if-ungrounded validator, not a keyword scan of translated text, since
+keyword-matching across EN/VI output doesn't generalize. Also enforces a ~22-word cap
+since unconstrained output tended to ramble past "one short sentence." Re-tested 6/6
+clean (5 VI + 1 EN) after the fix. Not yet stress-tested for the Báo Sâm-success/failure
+path (no capture scenario exists for it) or on real Apple Intelligence hardware (only
+tested via `xcodebuild`'s iOS 26.5 Simulator on this Mac mini, which does have Apple
+Intelligence available to it) — do that before considering this production-ready.
+
+**Not yet decided for shipping** — this is additive and low-risk (no IAP/paywall
+surface, no new entitlements), but hasn't had the same real-device verification pass
+given to the trial-lock change above. Hold for explicit go-ahead like that change.
+
 ## What this is
 
 - Standard 52-card deck, 4 players (you + 3 AI), 10 cards dealt each.
