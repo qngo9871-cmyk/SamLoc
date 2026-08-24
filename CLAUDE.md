@@ -6,6 +6,19 @@ scout in Claude's memory (`project_vietnamese_card_games_scout` / `project_samlo
 read those first for the full history (why this game, why not Tiến Lên/Binh Xập Xám/Xì
 Dách, the incumbent teardown, naming research).
 
+**2026-08-24/25 — v1.0.3 (build 5), fixed a real picker-truncation bug, SUBMITTED.**
+Found via a portfolio-wide code-level sweep for 3 known bug signatures (see
+`reference_compliance_gate_tool` memory). `Views/HomeView.swift`'s difficulty picker
+falls back to `!purchases.trialActive` once the trial expires (all 3 tiers can lock
+at once), and `maxWidth` was under the safe 340pt threshold — widened to 340. v1.0.2
+was already `READY_FOR_SALE` (live), so nothing to cancel — shipped as a normal
+new-version update: created appStoreVersion `ffff6f9f-79f4-4e42-ac74-f47ab9bafd35`
+(versionString 1.0.3, localizations copied forward), archived/exported/uploaded
+(Delivery UUID `4601599b-3a02-4a63-ac74-f66b6ba8c3d6`, processed `VALID`), attached
+the build, set `whatsNew` (both locales), created reviewSubmission
+`0ff92eae-2614-4449-a4a4-c80082caaf3c` and submitted. **Verified: WAITING_FOR_REVIEW
+as v1.0.3.**
+
 **Status: 🟢 LIVE since 2026-07-18 (v1.0.1). v1.0.2 SUBMITTED, WAITING_FOR_REVIEW
 (2026-08-18) — 7-day-trial-then-full-paywall, build 4, reviewSubmission
 `570cacb3-085b-43f4-9de1-d7529f864a53`, version `cedc4bba-e6b8-45ab-8815-5ed3346c0cfc`.
