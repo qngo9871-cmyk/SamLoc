@@ -1,3 +1,16 @@
+**2026-08-30 — v1.0.4 (build 6), language-switch bug fix, SUBMITTED, WAITING_FOR_REVIEW.**
+Investigated a "no purchases despite hundreds of downloads" report: the trial-then-lock
+paywall itself was verified working correctly (confirmed on-device with a temporarily
+shortened trial window), but the language Picker in `HomeView` bound directly to
+`$loc.language`, bypassing `LocalizationManager.setLanguage(_:)` — so the string-lookup
+`bundle` never updated when the selection changed. Switching to Vietnamese only *appeared*
+to work because the test device's system language was already Vietnamese; switching back
+to English silently had no effect. Fixed by making `bundle` computed from `language`
+instead of separately tracked. Same bug found+fixed portfolio-wide in 16 other apps same
+day; see memory `feedback_localization_picker_direct_binding_bug`. Archived/uploaded
+(build 6, VALID), attached to a fresh appStoreVersion, `whatsNew` set (en+vi), review
+notes appended explaining the fix. **Verified: WAITING_FOR_REVIEW as v1.0.4.**
+
 # Sâm Lốc — Vietnamese Card Game
 
 Native SwiftUI iOS app for Sâm Lốc, the traditional Vietnamese shedding card game. Bundle
