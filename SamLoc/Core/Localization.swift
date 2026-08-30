@@ -17,13 +17,16 @@ final class LocalizationManager: ObservableObject {
         didSet { UserDefaults.standard.set(language.rawValue, forKey: "app_language") }
     }
 
-    private var bundle: Bundle = .main
+    // Computed from `language`, not separately tracked -- a stored bundle that only
+    // some setters kept in sync (e.g. a direct Picker binding to `language`) went
+    // stale, silently leaving the UI on the old language. See the SamLoc CLAUDE.md
+    // 2026-08-30 entry.
+    private var bundle: Bundle { Self.bundle(for: language) }
 
     init() {
         let stored = UserDefaults.standard.string(forKey: "app_language")
         let lang = AppLanguage(rawValue: stored ?? "") ?? Self.systemDefault()
         self.language = lang
-        self.bundle = Self.bundle(for: lang)
     }
 
     private static func systemDefault() -> AppLanguage {
@@ -39,7 +42,6 @@ final class LocalizationManager: ObservableObject {
 
     func setLanguage(_ lang: AppLanguage) {
         language = lang
-        bundle = Self.bundle(for: lang)
     }
 
     func string(_ key: String) -> String {
