@@ -1,17 +1,19 @@
-**2026-09-04 — TestFlight internal build set up for a real-device purchase test.**
-To settle whether 0 IAP purchases despite 558 downloads is pricing/demand or a silent
-StoreKit failure (see note below), created ASC beta group `SamLoc Internal QA`
-(`5aaf131e-9a21-4529-aa73-c75a3f94e9e4`), added account holder `qngo@icloud.com` as an
-internal tester (`57d194b9-2840-47c2-8b91-9281c442998c`, internal group so no Beta App
-Review needed), and assigned build 6 (v1.0.4, `305e5a89-9af1-49d3-a39f-1eaa9b9a8b8f`) to
-it. Tester state was `NOT_INVITED` right after creation — Apple's invite email can take
-a few minutes to dispatch. **Still needs**: check the `qngo@icloud.com` inbox for the
-TestFlight invite, install via the TestFlight app, force the paywall to the locked state
-(wait out the trial or reset `firstLaunchDate`), tap Buy on `Sam Loc Pro`, and watch
-whether the sandbox purchase actually completes. Note: sandbox tester accounts aren't
-manageable via the public ASC API — if prompted to sign in for the purchase, either use
-an existing Sandbox tester (Users and Access → Sandbox → Testers in the ASC web UI) or
-create one there first.
+**2026-09-04 — Real-device TestFlight purchase test: PASSED, rules out a StoreKit bug.**
+Set up ASC internal beta group `SamLoc Internal QA` (`5aaf131e-9a21-4529-aa73-c75a3f94e9e4`),
+added account holder `qngo@icloud.com` as an internal tester, assigned build 6 (v1.0.4,
+`305e5a89-9af1-49d3-a39f-1eaa9b9a8b8f`). Tested on a real iPhone via TestFlight (no need
+to wait out the 7-day trial — Hard AI is locked unconditionally per `HomeView.swift:15`,
+so the paywall is reachable immediately): tapped Buy on `Sam Loc Pro`, sandbox purchase
+**completed normally**, and the unlock **persisted through a force-quit + relaunch**.
+
+This confirms the purchase path is fully sound end-to-end on real hardware, not just in
+code review — closes off the "silent StoreKit failure" theory from
+`feedback_simulator_storekit_failures_test_on_real_device`. **Conclusion: the 558
+downloads / 0 purchases gap (Aug 1–Sep 3) is a demand-side problem** — price resistance
+at $2.99, or players uninstalling at the paywall rather than converting — not a code or
+IAP-configuration bug. Next angle worth exploring if revisited: compare $2.99 against
+other Vietnamese card game apps' price points, or consider a cheaper/consumable pricing
+experiment before writing off Sam Loc's monetization.
 
 **2026-09-04 — re-checked after user asked "is it still giving away free play?"**
 Verified live: `asc_app_status.py` shows v1.0.4 is now `READY_FOR_SALE` (approved since
