@@ -1,3 +1,23 @@
+**2026-09-04 — re-checked after user asked "is it still giving away free play?"**
+Verified live: `asc_app_status.py` shows v1.0.4 is now `READY_FOR_SALE` (approved since
+the 2026-08-30 note below was written). Read the current `PurchaseManager.swift` +
+`HomeView.swift` on disk and confirmed the trial-then-lock gate matches what's live —
+Hard AI is always locked, Easy/Normal lock once the 7-day trial expires, no bare `#if
+DEBUG isPro = true` leak, `Sam Loc Pro` IAP is `APPROVED`/purchasable. Git log shows the
+trial-lock commit (`6bfa351`) hasn't been reverted or weakened since. **So: no, it is not
+giving away free play like the pre-2026-08-18 build did — that specific bug is fixed and
+confirmed live.**
+
+Sales Aug 1 – Sep 3: 558 downloads (509 VN), still **0 IAP units**. Split roughly
+301 downloads before the trial-lock fix went live (~Aug 19) and 257 after — the
+"after" cohort includes installs from Aug 19–26, which are now well past their 7-day
+trial window with no purchases either. IAP being `APPROVED` and the code being correct
+rules out a repeat of the old silent-failure bug; this looks like a demand-side/pricing
+problem (price resistance, or users just uninstalling at the paywall) rather than a
+code bug — but there's no purchase-attempt telemetry to confirm nobody is hitting a
+silent StoreKit failure on-device. Worth a real-device TestFlight purchase-flow test
+before concluding it's purely pricing (see `feedback_simulator_storekit_failures_test_on_real_device`).
+
 **2026-08-30 — v1.0.4 (build 6), language-switch bug fix, SUBMITTED, WAITING_FOR_REVIEW.**
 Investigated a "no purchases despite hundreds of downloads" report: the trial-then-lock
 paywall itself was verified working correctly (confirmed on-device with a temporarily
