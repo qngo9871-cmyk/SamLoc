@@ -1,3 +1,13 @@
+**2026-09-04 — Competitor check: 45,000 VND price is in line with the card-game category.**
+Pulled live App Store listings for direct Vietnam-market competitors ("Sâm Lốc Offline -
+Xâm Chặt Heo", "Tip.Club - Đại Gia Game Bài"). Their paid tiers run 29,000đ (cheapest
+currency pack) up to a 59,000đ "remove ads"/full-unlock tier — our 45,000 VND lifetime
+Pro unlock sits squarely inside that range. Unlike Bầu Cua/Cờ Cá Ngựa (see
+`~/Projects/BauCua/CLAUDE.md` and `~/Projects/CoCaNgua/CLAUDE.md` — competitors in
+those categories have **no paid IAP at all**), Sâm Lốc's category does support a paid
+unlock, so this pricing fix should be given a real chance to convert. Decision: leave at
+45,000 VND, watch download/purchase numbers over the next few weeks.
+
 **2026-09-04 — Real-device TestFlight purchase test: PASSED, rules out a StoreKit bug.**
 Set up ASC internal beta group `SamLoc Internal QA` (`5aaf131e-9a21-4529-aa73-c75a3f94e9e4`),
 added account holder `qngo@icloud.com` as an internal tester, assigned build 6 (v1.0.4,
